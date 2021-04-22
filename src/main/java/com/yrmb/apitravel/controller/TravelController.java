@@ -3,8 +3,10 @@ package com.yrmb.apitravel.controller;
 import com.yrmb.apitravel.model.Travel;
 import com.yrmb.apitravel.service.TravelService;
 import net.minidev.json.JSONObject;
+import org.apache.tomcat.util.bcel.classfile.Constant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -67,7 +69,7 @@ public class TravelController {
         }
     }
 
-    @PutMapping(path = "/{id}", produces = { "application/json" })
+    @PutMapping(path = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Travel> update(@PathVariable("id") long id, @RequestBody JSONObject travel) {
 
         try {
