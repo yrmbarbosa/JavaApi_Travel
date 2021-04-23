@@ -9,7 +9,7 @@ import java.math.RoundingMode;
 import java.util.List;
 
 @Service
-public class StatisticServer {
+public class StatisticService {
 
     public Statistic create(List<Travel> travels) {
 
